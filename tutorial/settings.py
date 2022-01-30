@@ -29,6 +29,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'ourFw.apps.OurfwConfig',
     'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -42,7 +43,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -73,9 +74,28 @@ WSGI_APPLICATION = 'tutorial.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
+        ##'ENGINE': 'django.db.backends.postgresql_psycopg2',
 
+        ###'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        ##'NAME': 'gis',  # 数据库名字
+        ###'NAME': 'mysqlgis',  # 数据库名字
+        'NAME': 'gis',  # 数据库名字
+        ##'USER': 'postgres',  # 用户名
+        ###'USER': 'root',  # 用户名
+        'USER': 'postgres',  # 用户名
+        ##"PASSWORD": '1509@watchtower',  # 自己的密码
+        ###"PASSWORD": 'root',  # 自己的密码
+        ####"PASSWORD":881106,  # 自己的密码
+        "PASSWORD": 123456,  # 自己的密码
+        ##"HOST": '10.244.6.72',  # '10.242.35.121' 天宫 现在用测试库 10.244.6.72
+        ###"HOST": '127.0.0.1',
+        "HOST": '47.104.29.55', #localhost
+        ##'PORT': 5433,  # 5431 天宫 5433
+        ###'PORT': 3306,
+        'PORT': 5432,
     }
 }
 
