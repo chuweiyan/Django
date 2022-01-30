@@ -79,23 +79,23 @@ DATABASES = {
         ##'ENGINE': 'django.db.backends.postgresql_psycopg2',
 
         ###'ENGINE': 'django.db.backends.mysql',
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        #####'ENGINE': 'django.db.backends.postgresql_psycopg2',
         ##'NAME': 'gis',  # 数据库名字
         ###'NAME': 'mysqlgis',  # 数据库名字
-        'NAME': 'gis',  # 数据库名字
+        #####'NAME': 'gis',  # 数据库名字
         ##'USER': 'postgres',  # 用户名
         ###'USER': 'root',  # 用户名
-        'USER': 'postgres',  # 用户名
+        #####'USER': 'postgres',  # 用户名
         ##"PASSWORD": '1509@watchtower',  # 自己的密码
         ###"PASSWORD": 'root',  # 自己的密码
         ####"PASSWORD":881106,  # 自己的密码
-        "PASSWORD": 123456,  # 自己的密码
+        #####"PASSWORD": 123456,  # 自己的密码
         ##"HOST": '10.244.6.72',  # '10.242.35.121' 天宫 现在用测试库 10.244.6.72
         ###"HOST": '127.0.0.1',
-        "HOST": '47.104.29.55', #localhost
+        #####"HOST": '47.104.19.55', #localhost
         ##'PORT': 5433,  # 5431 天宫 5433
         ###'PORT': 3306,
-        'PORT': 5432,
+        ######'PORT': 5432,
     }
 }
 
